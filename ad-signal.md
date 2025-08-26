@@ -327,3 +327,92 @@ func tags(from text: String) -> [TagScore] {
   let maxScore = max(scores.values.max() ?? 1, 1)
   return scores.map { TagScore(name: $0.key, score: min($0.va
 ```
+
+⸻
+
+8) Rules & Throttling (Reverb v0)
+    •    Trigger: if travel ≥ 0.6 in last 24h and travel_nudge not sent in last 7d → enqueue push.
+    •    Demo Mode: window=2m, fatigue=3m, so judges see immediate result.
+    •    A/B: toggle travel_nudge_v1 vs v2 copy.
+
+⸻
+
+9) Notification Delivery
+    •    APNs with token-based auth (P8 key). Category = travel_tip. Deep link = remic://practice/travel.
+    •    Fallback: if APNs fails, display in-app banner when app foregrounded.
+
+⸻
+
+10) Privacy & Compliance Guardrails
+    •    ATT consent required before enabling SignalTap.
+    •    Separate toggle for Interest-based Tips (purpose limitation, explicit opt-in).
+    •    Store only aggregated tags; no raw creatives, IDs, or click trackers.
+    •    Rate-limit uploads; implement delete data endpoint per user.
+    •    Document flows in Privacy Policy; easy opt-out in Settings.
+
+⸻
+
+11) Testing Checklist
+    •    Simulator + device test for ATT + ad rendering.
+    •    Parser unit tests: input strings → expected tags.
+    •    End-to-end: button → upload → rule → push (record timestamps).
+    •    Negative tests: no ATT consent → SignalTap disabled.
+    •    Fatigue tests: ensure repeated triggers are suppressed.
+
+⸻
+
+12) Demo Script (5 minutes)
+    1.    Open ReMic → toggle “Interest-based Tips” → Discover tab.
+    2.    Tap Prefetch Ads → show ads + Debug overlay with {travel:0.8}.
+    3.    Tap Send Snapshot (uploads aggregates) → backend logs show receipt.
+    4.    Push arrives: “Planning a trip? Use ReMic to speak like a local.”
+    5.    Tap notification → deep link opens Travel Practice screen.
+    6.    Show Pulse dashboard: tags, push sent/opened, conversion.
+    7.    Close with guardrails (privacy, ATT, aggregates only) and roadmap.
+
+⸻
+
+13) Stretch Goals
+    •    On-device Core ML classifier fine-tuned on ad snippets.
+    •    Multi-network support (Meta Audience Network) with adapter interface.
+    •    Real-time edge rules (Cloudflare Workers) for faster pushes.
+    •    Cohort personalization (beginner vs advanced learners).
+    •    Basic revenue estimate: lift in 7-day retention → LTV gain.
+
+⸻
+
+14) Risks & Mitigations
+    •    Ad SDK ToS: analyze only exposed text; no scraping of assets.
+    •    APNs unreliability: keep in-app banner fallback; cache deep link action.
+    •    Background fetch limits: drive via user action during demo; BG later.
+    •    No travel ads served: include mock ad toggle that feeds parser with travel keywords.
+
+⸻
+
+15) Appendix — Minimal Backend (Express)
+
+import express from "express";
+const app = express();
+app.use(express.json());
+app.post("/v1/interests", (req, res) => {
+  console.log("interests", req.body);
+  // TODO: store + evaluate rules; enqueue APNs
+  res.sendStatus(202);
+});
+app.post("/v1/events", (req, res) => { console.log("events", req.body); res.sendStatus(202); });
+app.listen(8787, () => console.log("gateway up"));
+
+
+⸻
+
+16) Appendix — Notification Copy Bank
+    •    Travel: “Planning a trip? Use ReMic to speak like a local.”
+    •    Education: “Learning Spanish? Practice a conversation with ReMic today.”
+    •    Dating: “Meeting new people? Break the ice in their language with ReMic.”
+    •    Return: “Welcome back! Pick up where you left off with ReMic.”
+
+⸻
+
+17) Final Notes
+
+Ship the happy path first. Optimize for a crisp, repeatable demo that proves the loop: ads → tags → rule → push → deep link → practice. Then iterate.
