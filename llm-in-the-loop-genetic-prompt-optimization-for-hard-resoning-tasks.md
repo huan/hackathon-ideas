@@ -202,62 +202,62 @@ We presented **LiT-GPO**, a novel genetic prompt optimization framework that emb
 - **Bias amplification:** Evolved prompts may inadvertently reinforce biases or unsafe behaviors present in the base model. Multi-objective optimization including fairness and safety should be considered.
 - **Dual use:** Although our work aims to improve reasoning reliability, similar techniques could be misused to optimize malicious prompts (e.g., jailbreaks). Responsible release and mo
 
-⸻
+---
 
-Appendix A: Example Evolved Prompts
+## Appendix A: Example Evolved Prompts
 
-A.1 SWE-bench Verified (Software Engineering)
-    •    Baseline Prompt:
+### A.1 SWE-bench Verified (Software Engineering)
+- **Baseline Prompt:**
 “Fix the following code issue and return the corrected file.”
-    •    Evolved Prompt (LiT-GPO):
+- **Evolved Prompt (LiT-GPO):**
 “You are a senior software engineer. Carefully analyze the bug report, identify the root cause, modify the code accordingly, and provide the updated patch in unified diff format. If uncertain, explain the ambiguity explicitly.”
 
-A.2 BIG-Bench Hard (Reasoning)
-    •    Baseline Prompt:
+### A.2 BIG-Bench Hard (Reasoning)
+- **Baseline Prompt:**
 “Answer the following logical puzzle.”
-    •    Evolved Prompt (LiT-GPO):
+- **Evolved Prompt (LiT-GPO):**
 “Consider the logical puzzle step by step. First restate the puzzle in your own words, then list relevant constraints, and finally deduce the solution. If multiple interpretations exist, present them and choose the most consistent.”
 
-A.3 GPQA-Diamond (STEM)
-    •    Baseline Prompt:
+### A.3 GPQA-Diamond (STEM)
+- **Baseline Prompt:**
 “Answer the graduate-level science question.”
-    •    Evolved Prompt (LiT-GPO):
+- **Evolved Prompt (LiT-GPO):**
 “You are a domain expert at the PhD level. Provide a structured solution: (1) define the key terms, (2) derive the answer step by step with equations if relevant, (3) provide the final concise answer. If any step is uncertain, say ‘unknown’.”
 
-A.4 GSM8K-Platinum (Math Reasoning)
-    •    Baseline Prompt:
+### A.4 GSM8K-Platinum (Math Reasoning)
+- **Baseline Prompt:**
 “Solve the math word problem.”
-    •    Evolved Prompt (LiT-GPO):
+- **Evolved Prompt (LiT-GPO):**
 “Solve the math problem systematically. Write down intermediate steps, justify each arithmetic operation, and verify the final answer. If an alternative approach exists, mention it briefly before giving the final numeric result.”
 
-⸻
+---
 
-Cover Letter for NeurIPS Submission
+## Cover Letter for NeurIPS Submission
 
-Title: LLM-in-the-loop Genetic Prompt Optimization for Hard Reasoning Tasks
+### Title: LLM-in-the-loop Genetic Prompt Optimization for Hard Reasoning Tasks
 
-Summary:
+### Summary
 We present LiT-GPO, a novel algorithmic framework that integrates Large Language Models into the evolutionary loop for prompt optimization. Unlike prior methods that rely on random mutation or gradient-based search, our approach uses the LLM itself as a semantic operator for mutation and crossover, producing coherent, high-quality prompts. LiT-GPO achieves substantial gains on tasks where LLMs typically underperform (<50% accuracy), including SWE-bench Verified (+23%) and BIG-Bench Hard (+18%).
 
-Novelty:
-    •    First GA variant to embed the LLM as an active evolutionary operator.
-    •    Bridges classic evolutionary computation with modern LLM capabilities.
-    •    Produces prompts that generalize across benchmarks and models.
+### Novelty
+- First GA variant to embed the LLM as an active evolutionary operator.
+- Bridges classic evolutionary computation with modern LLM capabilities.
+- Produces prompts that generalize across benchmarks and models.
 
-Broader Impact:
+### Broader Impact
 This work contributes to the foundation of evolutionary prompt engineering and opens avenues for AI-driven AI optimization. Potential applications include education, reasoning assistants, and software development tools. We also discuss ethical considerations such as computational cost, bias, and dual-use risks, emphasizing responsible deployment.
 
-Fit for NeurIPS:
+### Fit for NeurIPS
 Our paper advances both methodology and empirical understanding of LLM optimization, providing novel insights that are timely and of broad interest to the machine learning community.
 
-⸻
+---
 
-References
-    •    Shin et al. (2020). AutoPrompt: Eliciting Knowledge from Language Models with Automatically Generated Prompts.
-    •    Wei et al. (2022). Chain-of-Thought Prompting Elicits Reasoning in Large Language Models.
-    •    Fernando et al. (2023). PromptBreeder: Self-referential Evolutionary Prompt Optimization.
-    •    Xu et al. (2024). EvoPrompt: Evolutionary Search for Large Language Model Prompts.
-    •    Deng et al. (2022). RLPrompt: Optimizing Discrete Text Prompts with Reinforcement Learning.
-    •    Reid et al. (2024). GPQA: A Benchmark for Graduate-Level Question Answering.
-    •    Jimenez et al. (2023). SWE-bench: Can Language Models Resolve Real GitHub Issues?
-    •    Suzgun et al. (2022). Challenging BIG-Bench Tasks and Hardness Analysis.
+## References
+- Shin et al. (2020). AutoPrompt: Eliciting Knowledge from Language Models with Automatically Generated Prompts.
+- Wei et al. (2022). Chain-of-Thought Prompting Elicits Reasoning in Large Language Models.
+- Fernando et al. (2023). PromptBreeder: Self-referential Evolutionary Prompt Optimization.
+- Xu et al. (2024). EvoPrompt: Evolutionary Search for Large Language Model Prompts.
+- Deng et al. (2022). RLPrompt: Optimizing Discrete Text Prompts with Reinforcement Learning.
+- Reid et al. (2024). GPQA: A Benchmark for Graduate-Level Question Answering.
+- Jimenez et al. (2023). SWE-bench: Can Language Models Resolve Real GitHub Issues?
+- Suzgun et al. (2022). Challenging BIG-Bench Tasks and Hardness Analysis.
