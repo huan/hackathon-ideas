@@ -1,3 +1,12 @@
+---
+title: "LLM-in-the-loop Genetic Prompt Optimization for Hard Reasoning Tasks"
+author: "Huan Li"
+date: 2025-08-25
+tags:
+  - ga
+  - paper
+---
+
 # LLM-in-the-loop Genetic Prompt Optimization for Hard Reasoning Tasks
 
 ## Abstract
