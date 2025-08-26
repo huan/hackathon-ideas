@@ -1,3 +1,7 @@
+Date: Aug 25, 2025
+Author: Huan Li
+---
+
 # Hackathon Report — Building AdSignal
 
 This report outlines how to **build AdSignal** at a hackathon, based on prior brainstorming and design documentation. It’s structured as a tech specification and playbook so you can execute quickly during your next event.
