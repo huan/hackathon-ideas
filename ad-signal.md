@@ -14,6 +14,20 @@ Idea: Instead of trying to directly track user browsing/search behavior (which A
 
 ---
 
+## 15-second founder networking pitch
+
+⚡ “AdSignal turns ads into signals of user intent. We lightly tap into the ads users already see, interpret them with AI, and trigger perfectly timed re-engagement nudges. It’s like piggy-backing on Google and Meta’s billions in ad spend to power retention—without extra CAC.”
+
+## 1-minute elevator pitch
+
+🚀 *“Most apps fail at re-engagement because push notifications are generic and mistimed. At the same time, Google and Meta already spend billions figuring out exactly what users care about right now—through the ads they show. AdSignal taps into those ad streams, with user consent, and treats every ad as a real-time signal of intent. If a user is suddenly flooded with travel ads, that’s the perfect moment to nudge them with: ‘Traveling soon? Use ReMic to speak like a local.’
+
+Our platform makes this turnkey: SignalTap captures ad metadata on-device, AdEcho interprets it into interest tags, Reverb turns those into personalized notifications, and Pulse tracks results. The magic is we’re not building a new tracking system—we’re piggy-backing on the biggest ad networks in the world, using their spend as our intelligence layer.
+
+The result? Push notifications that feel timely, contextual, and human—lifting retention and engagement without raising customer acquisition costs. That’s AdSignal.”*
+
+---
+
 ## 1. Hackathon Goal
 
 - Prototype **AdSignal**, a system that turns ads shown in your iOS app into **signals of user intent**.
