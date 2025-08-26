@@ -1,11 +1,16 @@
-Date: Aug 25, 2025
-Author: Huan Li
+---
+title: "AdSignal - Piggy-back on the Ads as a 'Proxy Signal'"
+author: "Huan Li"
+date: 2025-08-25
+tags:
+  - ad
 ---
 
 # Hackathon Report — Building AdSignal
 
 This report outlines how to **build AdSignal** at a hackathon, based on prior brainstorming and design documentation. It’s structured as a tech specification and playbook so you can execute quickly during your next event.
 
+Idea: Instead of trying to directly track user browsing/search behavior (which Apple locks down), you piggy-back on the ads already being delivered to the user. Since ad networks (Google, Meta, etc.) optimize ads based on the user’s recent cross-app/web activity, the ads themselves become a “proxy signal” for the user’s current interests. Let me break it down.
 ---
 
 ## 1. Hackathon Goal
