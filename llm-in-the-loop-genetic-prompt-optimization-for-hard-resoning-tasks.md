@@ -9,6 +9,108 @@ tags:
 
 # LLM-in-the-loop Genetic Prompt Optimization for Hard Reasoning Tasks
 
+## 1-Minute Elevator Pitch
+
+Large Language Models are powerful, but they still fail badly on the hardest problems — reasoning puzzles, advanced math, and real-world software engineering — often scoring below 50%. Traditional prompt engineering is brittle and manual, while existing automated methods rely on costly reinforcement learning or random mutations that generate incoherent prompts.
+
+Our solution is **LiT-GPO — LLM-in-the-loop Genetic Prompt Optimization**. We embed the model itself inside a genetic algorithm, letting it act as the mutation and crossover operator. Instead of random edits, the LLM proposes fluent, semantically rich prompt variations. These evolve generation by generation, guided by task accuracy, robustness, and efficiency.
+
+On benchmarks like SWE-bench Verified and BIG-Bench Hard, LiT-GPO achieves **up to +23% accuracy improvements** and converges twice as fast as naive GA. Most importantly, evolved prompts generalize across models, proving that *AI can now optimize itself*. This work lays the foundation for **evolutionary prompt engineering** — a paradigm where LLMs help close their own reasoning gaps, pushing us closer to reliable, general-purpose AI.
+
+---
+
+## Spotlight Talk (5-slide version)
+
+### Slide 1 — Motivation & Problem
+
+```mermaid
+flowchart LR
+    A[LLMs strong but brittle] --> B[<50% on hard reasoning & SWE]
+    B --> C[Manual prompt design = brittle & costly]
+    C --> D[Need automated, generalizable prompt optimization]
+```
+
+---
+
+### Slide 2 — Key Idea: LiT-GPO
+
+```mermaid
+flowchart TD
+    GA[Genetic Algorithm] -->|Traditional| Bad[Random, incoherent prompts]
+    GA -->|Ours| LLM[LLM-in-the-loop Operators]
+    LLM --> Good[Semantic, coherent prompts]
+```
+
+* Mutation & crossover guided by the LLM itself.
+* Prompts evolve faster, remain fluent, and gain reasoning scaffolds.
+
+---
+
+### Slide 3 — Method & Setup
+
+```mermaid
+graph TB
+    Genome[Prompt Genome]
+    Genome --> Role[Role]
+    Genome --> Obj[Objective]
+    Genome --> Steps[Steps]
+    Genome --> Const[Constraints]
+    Genome --> Ex[Examples]
+
+    Fitness[Fitness = Accuracy + Robustness – Cost]
+
+    Benchmarks[Benchmarks]
+    Benchmarks --> BBH[BBH]
+    Benchmarks --> GPQA[GPQA-Diamond]
+    Benchmarks --> GSM8K[GSM8K-Platinum]
+    Benchmarks --> SWE[SWE-bench Verified]
+```
+
+---
+
+### Slide 4 — Results
+
+```mermaid
+xychart-beta
+    title "Accuracy Gains"
+    x-axis ["SWE-bench", "BBH", "GPQA", "GSM8K"]
+    y-axis "Accuracy (%)" 0 --> 70
+    bar "Baseline" [32,42,28,46]
+    bar "EvoPrompt" [39,47,33,50]
+    bar "LiT-GPO" [55,60,44,64]
+```
+
+* Up to **+23% absolute gains** on SWE-bench.
+* Faster convergence (\~10 vs 20 generations).
+* Cross-model generalization (transfer LLaMA → GPT-4).
+
+---
+
+### Slide 5 — Impact & Future
+
+```mermaid
+mindmap
+  root((LiT-GPO Impact))
+    Contribution
+      Novel GA variant
+      Significant empirical gains
+    Future
+      Multi-objective GA
+      Adversarial co-evolution
+      Theory of prompt landscapes
+    Broader Paradigm
+      AI optimizing AI
+```
+
+* Evolutionary prompt engineering: foundation for next-gen AI optimization.
+* Applications: education, reasoning assistants, software engineering.
+
+---
+
+**End Slide:** Thank You — Contact Info & Arxiv Link
+
+---
+
 ## Abstract
 
 Large Language Models (LLMs) are highly sensitive to prompt design. Despite remarkable progress, LLMs still underperform (<50% accuracy) on hard reasoning and software engineering tasks such as BIG-Bench Hard, GPQA-Diamond, GSM8K-Platinum, and SWE-bench Verified. We propose **LLM-in-the-loop Genetic Prompt Optimization (LiT-GPO)**, a novel algorithmic framework that integrates a Genetic Algorithm (GA) with the LLM itself as a prompt mutator and recombination operator. Unlike traditional GA approaches that rely on random mutation and crossover, LiT-GPO leverages the generative and semantic capabilities of the model to propose linguistically coherent and diverse prompt variants. Through comprehensive experiments across open-source (LLaMA 2, Mistral, Falcon) and API-based (GPT-4, Claude 3, Gemini 1.5) models, we show that LiT-GPO significantly improves success rates on hard benchmarks, achieving up to **+23% accuracy improvement** on SWE-bench Verified and **+18%** on BIG-Bench Hard. Our analysis reveals that LLM-guided prompt evolution not only accelerates convergence but also produces prompts that generalize across tasks and models. We conclude that evolutionary prompt search augmented with LLM-internal knowledge represents a powerful and general methodology for closing reasoning gaps without retraining.
