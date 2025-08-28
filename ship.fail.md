@@ -1,5 +1,9 @@
 # 🚀 Ship.Fail — GitHub for Hackathon Ideas
 
+## History
+
+- Aug 28, 2025 - [Luke Hollis: did it! ✊🏻](https://github.com/lukehollis/shipfail)
+
 ## 🔥 One-liner
 
 A tiny hacker-friendly service where developers can **draft, share, fork, and team up on hackathon ideas** — fail fast, ship faster.
