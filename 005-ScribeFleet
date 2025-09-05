@@ -1,74 +1,80 @@
-ScribeFleet — AI Sub‑Agent Docs Engine for Wechaty (Diátaxis × Docusaurus × Claude Code)
+# ScribeFleet — AI Sub‑Agent Docs Engine for Wechaty (Diátaxis × Docusaurus × Claude Code)
 
-Owner: Huan Li
-Status: Draft / Hackathon‑ready
-Scope: MVP for Wechaty → reusable template for any OSS repo
+**Owner:** Huan Li
+**Status:** Draft / Hackathon‑ready
+**Scope:** MVP for Wechaty → reusable template for any OSS repo
 
-⸻
+---
 
-TL;DR
+## TL;DR
 
-One‑liner:
-ScribeFleet auto‑generates, tests, and continuously updates Diátaxis‑structured documentation for Wechaty using Claude Code sub‑agents and publishes it via Docusaurus—kept fresh by PRs on every code change.
+**One‑liner:**
+**ScribeFleet** auto‑generates, tests, and continuously updates Diátaxis‑structured documentation for Wechaty using Claude Code sub‑agents and publishes it via Docusaurus—kept fresh by PRs on every code change.
 
-30‑second pitch:
-Docs rot. Contributors are blocked. Newcomers bounce. Wechaty (and most OSS projects) need docs that are accurate, approachable, and always current. ScribeFleet is an agent team that turns your codebase and issues into living documentation. Each sub‑agent owns a quadrant of Diátaxis (Tutorials, How‑to, Reference, Explanation). A CI pipeline extracts API facts from the code, writes Reference pages, drafts Tutorials/How‑tos, runs doctests on examples, builds a Docusaurus site, and opens PRs with previews. Humans approve; the fleet sails on. Ship an MVP for Wechaty in a weekend, then template it for every OSS that wants docs that don’t decay.
+**30‑second pitch:**
+Docs rot. Contributors are blocked. Newcomers bounce. Wechaty (and most OSS projects) need docs that are accurate, approachable, and always current. **ScribeFleet** is an agent team that turns your codebase and issues into living documentation. Each sub‑agent owns a quadrant of Diátaxis (Tutorials, How‑to, Reference, Explanation). A CI pipeline extracts API facts from the code, writes Reference pages, drafts Tutorials/How‑tos, runs doctests on examples, builds a Docusaurus site, and opens PRs with previews. Humans approve; the fleet sails on. Ship an MVP for Wechaty in a weekend, then template it for every OSS that wants docs that don’t decay.
 
-⸻
+---
 
-Background & Motivation (Why This, Why Now)
-	•	I’ve used the Documentation System (Diátaxis) before for Wechaty and love it—it helps me understand the whole picture and details. But our current docs still feel incomplete, inconsistent, and hard to keep updated.
-	•	In 2021 we socialized the idea; today’s AI coding agents can actually execute it: they parse code, enforce styles, and run CI. We can finally keep docs in sync with code via automated PRs.
-	•	Personal pain: I often feel AI can generate better foundations than humans, especially for large, evolving codebases. Humans then refine and approve. That’s exactly the loop I want.
+## Background & Motivation (Why This, Why Now)
 
-⸻
+* I’ve used the **Documentation System** (Diátaxis) before for Wechaty and love it—it helps me understand the whole picture and details. But our current docs still feel **incomplete, inconsistent, and hard to keep updated**.
+* In 2021 we socialized the idea; **today’s AI coding agents** can actually execute it: they parse code, enforce styles, and run CI. We can finally **keep docs in sync with code** via automated PRs.
+* Personal pain: I often feel **AI can generate better foundations** than humans, especially for large, evolving codebases. Humans then refine and approve. That’s exactly the loop I want.
 
-Problem Statement
-	•	Drift: APIs evolve faster than docs; outdated pages mislead users.
-	•	Blend: Tutorials, How‑tos, Reference, and Explanation get mixed, raising cognitive load for new readers.
-	•	Bus factor: Only a few maintainers understand the architecture; knowledge isn’t codified.
-	•	Scale: Multi‑language SDKs (JS/TS, Python, Go, Java, …) multiply the surface area.
-	•	Maintenance tax: Humans can’t sustainably regenerate Reference and examples for every change.
+---
 
-Impact on Wechaty: Slower onboarding, more repeated questions, stalled contributions, and missed opportunities for growth.
+## Problem Statement
 
-⸻
+* **Drift:** APIs evolve faster than docs; outdated pages mislead users.
+* **Blend:** Tutorials, How‑tos, Reference, and Explanation get mixed, raising cognitive load for new readers.
+* **Bus factor:** Only a few maintainers understand the architecture; knowledge isn’t codified.
+* **Scale:** Multi‑language SDKs (JS/TS, Python, Go, Java, …) multiply the surface area.
+* **Maintenance tax:** Humans can’t sustainably regenerate Reference and examples for every change.
 
-Solution Overview
+**Impact on Wechaty:** Slower onboarding, more repeated questions, stalled contributions, and missed opportunities for growth.
 
-ScribeFleet is a repo‑native agent team (Claude Code sub‑agents) that:
-	1.	Extracts Reference from code (JSDoc/Type‑stubs/Annotations) → generates one page per public symbol.
-	2.	Drafts Tutorials/How‑tos from common tasks and issues → runnable examples with checkpoints.
-	3.	Writes Explanations (architecture, Puppets, design tradeoffs) → concept clarity.
-	4.	Builds and Previews a Docusaurus site → PRs with screenshots and preview links.
-	5.	Watches for drift (git diff on public surfaces) → auto‑opens update PRs.
-	6.	Enforces Diátaxis boundaries via a doc linter → prevents style/type mixing.
+---
 
-Results: Accurate, approachable, and always‑current docs with human review in the loop.
+## Solution Overview
 
-⸻
+**ScribeFleet** is a **repo‑native agent team** (Claude Code sub‑agents) that:
 
-Code Name Rationale
-	•	ScribeFleet evokes a coordinated crew of writers (sub‑agents) working in parallel.
-	•	Signals movement and continuity (docs that sail forward with the code).
-	•	Memorable, brandable, works beyond Wechaty.
+1. **Extracts Reference** from code (JSDoc/Type‑stubs/Annotations) → generates one page per public symbol.
+2. **Drafts Tutorials/How‑tos** from common tasks and issues → runnable examples with checkpoints.
+3. **Writes Explanations** (architecture, Puppets, design tradeoffs) → concept clarity.
+4. **Builds and Previews** a Docusaurus site → PRs with screenshots and preview links.
+5. **Watches for drift** (git diff on public surfaces) → auto‑opens update PRs.
+6. **Enforces Diátaxis boundaries** via a doc linter → prevents style/type mixing.
 
-Alternates: QuadraScribe, DocFoundry, DocWeaver, DX‑Atlas. (Keep ScribeFleet for MVP.)
+**Results:** Accurate, approachable, and always‑current docs with human review in the loop.
 
-⸻
+---
 
-Reader Experience Goals (Diátaxis)
-	•	Tutorials (learn): “Happy path” lessons; one per stack (JS/TS → Python → Go → Java). Each step ends with “You should see…”.
-	•	How‑to guides (solve): One small outcome per page (e.g., handle QR login, reconnect on error, use Puppet X).
-	•	Reference (know): Factual pages per symbol (classes, functions, events). Generated from code. Cross‑links to How‑tos.
-	•	Explanation (understand): Concepts and architecture (Wechaty core, Puppet abstraction, adapters, design tradeoffs).
+## Code Name Rationale
 
-Rule: Do not mix types. Linter enforces boundaries.
+* **ScribeFleet** evokes a **coordinated crew of writers** (sub‑agents) working in parallel.
+* Signals **movement and continuity** (docs that sail forward with the code).
+* Memorable, brandable, works beyond Wechaty.
 
-⸻
+**Alternates:** *QuadraScribe*, *DocFoundry*, *DocWeaver*, *DX‑Atlas*. (Keep **ScribeFleet** for MVP.)
 
-Architecture (MVP)
+---
 
+## Reader Experience Goals (Diátaxis)
+
+* **Tutorials (learn):** “Happy path” lessons; one per stack (JS/TS → Python → Go → Java). Each step ends with “You should see…”.
+* **How‑to guides (solve):** One small outcome per page (e.g., handle QR login, reconnect on error, use Puppet X).
+* **Reference (know):** Factual pages per symbol (classes, functions, events). Generated from code. Cross‑links to How‑tos.
+* **Explanation (understand):** Concepts and architecture (Wechaty core, Puppet abstraction, adapters, design tradeoffs).
+
+**Rule:** Do not mix types. Linter enforces boundaries.
+
+---
+
+## Architecture (MVP)
+
+```
 repo-root/
   .claude/agents/                # Claude Code sub-agent definitions
     doc-architect.md
@@ -89,82 +95,96 @@ repo-root/
     sidebars.js
   CLAUDE.md                      # House style & Diátaxis rules
   .github/workflows/docs.yml     # CI: generate, lint, build, open PR
+```
 
-Data flows:
-	1.	Code & JSDoc → Reference Extractor → docs/reference/*
-	2.	Git diff / Issues → Doc Architect → task backlog → Tutorial Chef/How‑to Writer → new/updated pages
-	3.	Explainer generates architecture/concepts, links out to Tutorials/How‑tos/Reference
-	4.	Linter validates style, headings, links, and doc‑type boundaries
-	5.	Publisher builds Docusaurus, uploads preview, opens/updates PR
-	6.	Changelog Watcher triggers edits on API surface changes
+**Data flows:**
 
-⸻
+1. Code & JSDoc → **Reference Extractor** → `docs/reference/*`
+2. Git diff / Issues → **Doc Architect** → task backlog → **Tutorial Chef**/**How‑to Writer** → new/updated pages
+3. **Explainer** generates architecture/concepts, links out to Tutorials/How‑tos/Reference
+4. **Linter** validates style, headings, links, and doc‑type boundaries
+5. **Publisher** builds Docusaurus, uploads preview, opens/updates PR
+6. **Changelog Watcher** triggers edits on API surface changes
 
-Sub‑Agent Specs (contracts)
+---
 
-1) Doc Architect (planner)
-	•	Input: Repo tree, package manifests, git diff, open issues with doc tags.
-	•	Output: Backlog YAML (topic, quadrant, owner agent, acceptance criteria, cross‑links).
-	•	Rules: No content writing; only planning and routing. Must tag Diátaxis quadrant.
+## Sub‑Agent Specs (contracts)
 
-2) Reference Extractor (facts only)
-	•	Input: Source files + JSDoc/annotations + type info.
-	•	Output: One page per public symbol (signature, params, returns, brief description, minimal example). Cross‑link related symbols.
-	•	Rules: No opinions, no step‑by‑step. Fail if symbol unresolved. Add @since, @deprecated where applicable.
+### 1) Doc Architect (planner)
 
-3) Tutorial Chef (happy path)
-	•	Input: Backlog items tagged tutorial.
-	•	Output: Lesson with goal → prerequisites → steps (each ends with an observable check) → next steps.
-	•	Rules: Minimal runnable examples; prefer Codespaces/Docker for setup. Avoid API matrices.
+* **Input:** Repo tree, package manifests, git diff, open issues with doc tags.
+* **Output:** Backlog YAML (topic, quadrant, owner agent, acceptance criteria, cross‑links).
+* **Rules:** No content writing; only planning and routing. Must tag Diátaxis quadrant.
 
-4) How‑to Writer (recipes)
-	•	Input: Backlog items tagged how-to.
-	•	Output: Problem, prerequisites, numbered steps, verification, pitfalls, related links.
-	•	Rules: One outcome per page. Link to Reference for API details.
+### 2) Reference Extractor (facts only)
 
-5) Explainer (concepts)
-	•	Input: Architecture notes, design docs, maintainers’ comments.
-	•	Output: Concept overview, motivation, alternatives, tradeoffs, related links.
-	•	Rules: No step lists or exhaustive APIs.
+* **Input:** Source files + JSDoc/annotations + type info.
+* **Output:** One page per public symbol (signature, params, returns, brief description, minimal example). Cross‑link related symbols.
+* **Rules:** No opinions, no step‑by‑step. Fail if symbol unresolved. Add `@since`, `@deprecated` where applicable.
 
-6) Linter / Stylekeeper
-	•	Input: Changed docs.
-	•	Output: CI annotations; block merge on violations.
-	•	Rules: Enforce title case, headings order, front‑matter, link validity, code‑block fences/language tags, quadrant purity (regex heuristics).
+### 3) Tutorial Chef (happy path)
 
-7) Publisher
-	•	Input: Built site artifacts.
-	•	Output: PR with preview link + screenshots; comment with changed pages.
-	•	Rules: Fail fast on build/link errors. Attach artifact.
+* **Input:** Backlog items tagged `tutorial`.
+* **Output:** Lesson with goal → prerequisites → steps (each ends with an observable check) → next steps.
+* **Rules:** Minimal runnable examples; prefer Codespaces/Docker for setup. Avoid API matrices.
 
-8) Changelog Watcher
-	•	Input: Git diff on public API / config / CLI.
-	•	Output: Issues + draft PRs to update affected pages.
-	•	Rules: Label by quadrant; auto‑assign reviewers.
+### 4) How‑to Writer (recipes)
 
-⸻
+* **Input:** Backlog items tagged `how-to`.
+* **Output:** Problem, prerequisites, numbered steps, verification, pitfalls, related links.
+* **Rules:** One outcome per page. Link to Reference for API details.
 
-Prompting Strategy (repo‑native)
-	•	CLAUDE.md (repo root): House style, glossary, link policy, code‑block conventions, Diátaxis hard rules.
-	•	Per‑agent prompts (.claude/agents/*.md): Role‑specific system prompts with allowed tools & write paths.
-	•	CI --append-system-prompt (optional): Non‑negotiables (e.g., “Reference pages must not include tutorials”).
+### 5) Explainer (concepts)
 
-Doc type templates (fragments):
-	•	Tutorial: goal → prerequisites → steps (✔ expected result) → troubleshooting → next steps.
-	•	How‑to: problem → prerequisites → steps → verification → pitfalls → related.
-	•	Reference: name → signature → params → returns → example → see also.
-	•	Explanation: what/why → motivations → alternatives → tradeoffs → links.
+* **Input:** Architecture notes, design docs, maintainers’ comments.
+* **Output:** Concept overview, motivation, alternatives, tradeoffs, related links.
+* **Rules:** No step lists or exhaustive APIs.
 
-⸻
+### 6) Linter / Stylekeeper
 
-Docusaurus Setup
-	•	Autogenerated sidebars per folder: tutorials/, how-to/, reference/, explanation/.
-	•	Versioning after MVP (v1 baseline → vNext branches).
-	•	Search: start with default; later add hybrid BM25 + embeddings over docs and code symbols.
-	•	i18n: Minimize at MVP; structure for future languages.
+* **Input:** Changed docs.
+* **Output:** CI annotations; block merge on violations.
+* **Rules:** Enforce title case, headings order, front‑matter, link validity, code‑block fences/language tags, **quadrant purity** (regex heuristics).
 
-Example sidebars.js:
+### 7) Publisher
 
+* **Input:** Built site artifacts.
+* **Output:** PR with preview link + screenshots; comment with changed pages.
+* **Rules:** Fail fast on build/link errors. Attach artifact.
+
+### 8) Changelog Watcher
+
+* **Input:** Git diff on public API / config / CLI.
+* **Output:** Issues + draft PRs to update affected pages.
+* **Rules:** Label by quadrant; auto‑assign reviewers.
+
+---
+
+## Prompting Strategy (repo‑native)
+
+* \`\`\*\* (repo root):\*\* House style, glossary, link policy, code‑block conventions, Diátaxis hard rules.
+* **Per‑agent prompts (**\`\`**):** Role‑specific system prompts with allowed tools & write paths.
+* **CI **\`\`** (optional):** Non‑negotiables (e.g., “Reference pages must not include tutorials”).
+
+**Doc type templates (fragments):**
+
+* **Tutorial:** goal → prerequisites → steps (✔ expected result) → troubleshooting → next steps.
+* **How‑to:** problem → prerequisites → steps → verification → pitfalls → related.
+* **Reference:** name → signature → params → returns → example → see also.
+* **Explanation:** what/why → motivations → alternatives → tradeoffs → links.
+
+---
+
+## Docusaurus Setup
+
+* **Autogenerated sidebars** per folder: `tutorials/`, `how-to/`, `reference/`, `explanation/`.
+* **Versioning** after MVP (v1 baseline → vNext branches).
+* **Search**: start with default; later add hybrid BM25 + embeddings over docs and code symbols.
+* **i18n**: Minimize at MVP; structure for future languages.
+
+**Example **\`\`**:**
+
+```js
 module.exports = {
   docs: [
     { type: 'autogenerated', dirName: 'tutorials' },
@@ -173,196 +193,52 @@ module.exports = {
     { type: 'autogenerated', dirName: 'explanation' },
   ],
 };
-
-
-⸻
-
-CI/CD (GitHub Actions) — docs.yml
-
-Triggers: push, pull_request, nightly cron.
-
-Jobs:
-	1.	setup: checkout, set up Node/PNPM, install deps.
-	2.	generate-reference: run Reference Extractor; fail if unresolved symbols.
-	3.	generate-guides: Doc Architect computes affected topics; create/update How‑to/Tutorial drafts.
-	4.	lint: run Stylekeeper; link check; quadrant purity checks; markdown lint; spellcheck (allowlist for domain terms).
-	5.	doctest: execute code blocks (where feasible) to validate examples.
-	6.	build: Docusaurus build; upload artifact; capture screenshots.
-	7.	publish-preview: comment on PR with preview URL; assign reviewers.
-	8.	watch-drift (nightly): diff public surfaces; open/update PRs for drift fixes.
-
-⸻
-
-MVP Scope (Hackathon weekend)
-	•	Docusaurus skeleton + autogen sidebars.
-	•	.claude/agents/* for 8 roles; CLAUDE.md house style.
-	•	Reference generation for Wechaty core (Message, Contact, Room, Wechaty, events).
-	•	3 Tutorials: “Your first bot” (JS/TS), “Run on Docker”, “Run in Codespaces”.
-	•	5 How‑tos: QR login, reconnect, use Puppet X, webhooks, filter messages.
-	•	2 Explanations: architecture overview; Puppets & adapters.
-	•	CI pipeline for generate → lint → build → preview PR.
-
-Deliverables: PR to wechaty/wechaty (or a staging repo) with working site + preview. Screenshots + short demo video.
-
-⸻
-
-Success Criteria (MVP)
-	•	Time‑to‑First‑Success (TTFS) for a new user with the “first bot” tutorial ≤ 10 minutes.
-	•	Reference coverage for core symbols ≥ 80%.
-	•	CI doctest pass rate ≥ 95% for runnable snippets.
-	•	Quadrant purity linter passes at 100% on main.
-	•	PR turnaround (docs) reduced by 50% vs. baseline.
-
-⸻
-
-Risks & Mitigations
-	•	Hallucinations: reference is code‑sourced only; fail CI on unresolved symbols; examples run in doctest.
-	•	Quadrant creep: linter blocks mixed‑type pages (heuristics & keywords).
-	•	Multi‑repo sprawl: maintain a manifest of Wechaty packages/SDKs; add adapters incrementally.
-	•	Rate limits / costs: batch tasks; cache build artifacts; schedule nightly crawls.
-	•	Broken links / previews: link checker + Docusaurus build must pass before PR comment.
-
-⸻
-
-Stretch Goals (Post‑MVP)
-	•	Versioned docs (e.g., v1, v2) with backports.
-	•	Issue → Doc Router: common GitHub issues become draft How‑tos.
-	•	Embeddings search over docs + symbols with code‑aware ranking.
-	•	Screenshot & GIF capture for tutorials (auto‑generate visuals).
-	•	Template repo for any OSS project → “Click‑to‑Doc” with ScribeFleet.
-
-⸻
-
-Roadmap
-	•	Hackathon (Week 0): MVP deliverables above.
-	•	Weeks 1–2: Expand Reference coverage; add language SDKs; polish tutorials; integrate basic embeddings search.
-	•	Month 1: Versioning; community template; document contribution guide; publish launch post.
-
-⸻
-
-Contribution Model & License
-	•	License: Apache‑2.0 (project templates and linter rules).
-	•	Governance: PR review by maintainers; doc reviewers for quadrant quality.
-	•	Community: Accept new sub‑agent roles and house‑style improvements via RFCs.
-
-⸻
-
-Operational Playbook
-	•	Add a Docs label in GitHub; issues with that label become backlog items for the Doc Architect.
-	•	Encourage contributors to pick tasks by quadrant; keep pages short and purposeful.
-	•	Enforce style via CI; failures must be fixed or justified in PR comments.
-	•	Maintain a glossary and link map to prevent duplication and dead ends.
-
-⸻
-
-Appendix A — Example PR Checklist
-	•	Correct quadrant (Tutorial / How‑to / Reference / Explanation)
-	•	Accurate links and cross‑refs
-	•	Minimal, runnable examples (where applicable)
-	•	No duplication with existing pages
-	•	Linter + doctest + build all green
-
-⸻
-
-Appendix B — Example Linter Heuristics
-	•	Tutorials must include: goal, prerequisites, steps, verification.
-	•	How‑tos must include: problem, steps, verification, pitfalls.
-	•	Reference pages must include: signature, params/returns, example.
-	•	Explanation pages must include: motivation, alternatives, tradeoffs.
-	•	Block if forbidden patterns appear (e.g., “Parameters:” in Tutorials).
-
-⸻
-
-Appendix C — Example Page Skeletons
-
-Tutorial
-
-# Build Your First Wechaty Bot (JS/TS)
-
-## Goal
-Create a bot that replies “Hello” to incoming messages.
-
-## Prerequisites
-- Node.js ≥ 20
-- Wechaty installed
-
-## Steps
-1. Init project …
-2. Write minimal bot …
-3. Run and login (QR)…
-
-## You should see
-- A QR code in the terminal
-- “Hello” replies when you DM the bot
-
-## Next steps
-- Add filters, connect webhooks
-
-How‑to
-
-# Handle QR Login with Wechaty
-
-## Problem
-Scan a QR to authenticate your bot.
-
-## Steps
-1. Subscribe to `scan` event …
-2. Render QR in terminal …
-3. Verify login …
-
-## Verification
-- `loggedIn` event fired
-
-## Pitfalls
-- Expired QR → regenerate
-
-Reference
-
-# Class: Message
-
-## Signature
-`constructor(rawPayload: Payload)`
-
-## Methods
-- `text(): string`
-- `from(): Contact`
-
-## Example
-```ts
-bot.on('message', async m => {
-  console.log(m.text())
-})
-
-See also
-	•	Contact, Room
-
-**Explanation**
-
-Wechaty Architecture & Puppets
-
-What & Why
-
-Wechaty abstracts platform specifics via Puppets …
-
-Alternatives
-	•	Direct API integrations …
-
-Tradeoffs
-	•	Pros/Cons of Puppet abstraction …
+```
 
 ---
 
-## Resources
-- Wechaty repo: https://github.com/wechaty/wechaty
-- Previous Diátaxis write‑up (Wechaty): https://wechaty.js.org/2021/03/25/google-season-of-docs-documentation-system/
-- Docusaurus: https://github.com/facebook/docusaurus
-- Claude Code sub‑agents: https://docs.anthropic.com/en/docs/claude-code/sub-agents
+## CI/CD (GitHub Actions) — `docs.yml`
+
+**Triggers:** `push`, `pull_request`, nightly cron.
+
+**Jobs:**
+
+1. **setup**: checkout, set up Node/PNPM, install deps.
+2. **generate-reference**: run Reference Extractor; fail if unresolved symbols.
+3. **generate-guides**: Doc Architect computes affected topics; create/update How‑to/Tutorial drafts.
+4. **lint**: run Stylekeeper; link check; quadrant purity checks; markdown lint; spellcheck (allowlist for domain terms).
+5. **doctest**: execute code blocks (where feasible) to validate examples.
+6. **build**: Docusaurus build; upload artifact; capture screenshots.
+7. **publish-preview**: comment on PR with preview URL; assign reviewers.
+8. **watch-drift** (nightly): diff public surfaces; open/update PRs for drift fixes.
 
 ---
 
-## Call to Action
-- Create a `scribe‑fleet` branch (or staging repo).
-- Generate the skeleton + agents + CI.
-- Ship the MVP PR with previews. Iterate with the community.
+## MVP Scope (Hackathon weekend)
 
-> **Vision:** Make ScribeFleet a plug‑and‑play docs engine any OSS can adopt to ship Diátaxis‑clean, continuously updated documentation—without burning maintainers out.
+* Docusaurus skeleton + autogen sidebars.
+* `.claude/agents/*` for 8 roles; `CLAUDE.md` house style.
+* Reference generation for **Wechaty core** (Message, Contact, Room, Wechaty, events).
+* 3 Tutorials: “Your first bot” (JS/TS), “Run on Docker”, “Run in Codespaces”.
+* 5 How‑tos: QR login, reconnect, use Puppet X, webhooks, filter messages.
+* 2 Explanations: architecture overview; Puppets & adapters.
+* CI pipeline for generate → lint → build → preview PR.
+
+**Deliverables:** PR to `wechaty/wechaty` (or a staging repo) with working site + preview. Screenshots + short demo video.
+
+---
+
+## Success Criteria (MVP)
+
+* **Time‑to‑First‑Success** (TTFS) for a new user with the “first bot” tutorial ≤ **10 minutes**.
+* **Reference coverage** for core symbols ≥ **80%**.
+* **CI doctest pass rate** ≥ **95%** for runnable snippets.
+* **Quadrant purity** linter passes at **100%** on main.
+* **PR turnaround** (docs) reduced by **50%** vs. baseline.
+
+---
+
+## Risks & Mitigations
+
+* **Hallucinations:** reference is **code‑sourced only**; fail CI on unresolved symbols; examples run in doctest.
+* **Quadrant creep:** linter blocks mixed‑type pages (heuristics & keywo
