@@ -1,9 +1,9 @@
-# ScribeFleet — AI Sub‑Agent Docs Engine for Wechaty (Diátaxis × Docusaurus × Claude Code)
-
-**Owner:** Huan Li
-**Status:** Draft / Hackathon‑ready
-**Scope:** MVP for Wechaty → reusable template for any OSS repo
-
+---
+title: ScribeFleet — AI Sub‑Agent Docs Engine for Wechaty (Diátaxis × Docusaurus × Claude Code)
+author: "Huan Li"
+date: 2025-09-05
+tags:
+  - documentation
 ---
 
 ## TL;DR
