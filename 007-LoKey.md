@@ -1,3 +1,12 @@
+---
+title: Generative AI as simple as Firebase Realtime Database.
+author: "Huan Li"
+date: 2025-09-15
+tags:
+  - firebase
+  - generative
+---
+
 Hackathon Guidance: Firebase + Vertex AI RTDB Extension
 
 FireGen: a Firebase Extension that turns RTDB into your universal Generative AI API. Developers just push a job node and listen for results. That’s it.”
