@@ -1,7 +1,7 @@
 ---
 title: The AI-powered copilot that runs your Foundation Sprint in 2 days and Google Design Sprint in 5 days, turning chaos into clarity and prototypes into evidence-backed decisions.
 author: "Huan Li"
-date: 2025-08-30
+date: 2025-09-08
 tags:
   - sprint
   - design
