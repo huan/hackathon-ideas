@@ -1,16 +1,16 @@
 # 🧠 UnDoc — Hackathon Idea Memo
 
-**Tagline:** *Turn dense vendor docs into developer-ready guides.*
+**Tagline:** *Undo the docs. Read what matters.*
 **One-liner:** Paste any documentation URL → get a clear, Divio-structured, Tailwind-styled page that’s readable, versioned, and community-voted.
 
 **Elevator Pitch:**
-ReDoc is your developer’s secret weapon for understanding complex documentation fast. Instead of drowning in walls of enterprise jargon, just paste a link — and ReDoc transforms it into a structured, readable, and actionable page. It’s like having an expert technical writer who instantly rewrites any doc into the style you wish every API team used.
+UnDoc is your developer’s secret weapon for understanding complex documentation fast. Instead of drowning in walls of enterprise jargon, just paste a link — and UnDoc transforms it into a structured, readable, and actionable page. It’s like having an expert technical writer who instantly rewrites any doc into the style you wish every API team used.
 
 ---
 
 ## 🚀 Overview
 
-ReDoc is an MVP service that regenerates complex, enterprise-style technical documentation (from Google Cloud, AWS, Azure, Stripe, Twilio, etc.) into easy-to-understand, developer-first pages.
+UnDoc is an MVP service that regenerates complex, enterprise-style technical documentation (from Google Cloud, AWS, Azure, Stripe, Twilio, etc.) into easy-to-understand, developer-first pages.
 
 It uses the **Divio Documentation System** — Tutorials · How-to · Explanation · Reference — to structure and present content in a clear, human-friendly way.
 
@@ -22,7 +22,7 @@ It uses the **Divio Documentation System** — Tutorials · How-to · Explanatio
 
 ### Solution
 
-ReDoc converts dense vendor docs into simplified, visually consistent pages:
+UnDoc converts dense vendor docs into simplified, visually consistent pages:
 
 * Divio-structured layout (Tutorials, How-to, Explanation, Reference)
 * Tailwind-styled, modern UI
@@ -38,6 +38,91 @@ ReDoc converts dense vendor docs into simplified, visually consistent pages:
 * **Boost productivity** — integrate directly into dev flows as a doc translator tool.
 * **Empower communities** — encourage open collaboration through voting and community curation.
 * **Bridge AI and learning** — leverage generative models to make understanding faster, not just searching.
+
+---
+
+## 🎯 Mission
+
+> To make understanding technical documentation effortless, fast, and even fun —  
+> by stripping away complexity and exposing the signal beneath the noise.
+
+---
+
+## 💡 Core Value Proposition
+
+| Benefit | Description |
+|----------|-------------|
+| 🧠 **Save Hours** | Paste any doc URL and get a human-readable version in seconds. |
+| ⚙️ **Built for Developers** | Structured like great docs should be — Tutorials · How-To · Explanation · Reference. |
+| 🧩 **AI-powered Clarity** | Uses LLMs trained on developer reasoning, not marketing fluff. |
+| 🧭 **Community-Validated** | Vote on the best regenerated versions. Learn from the smartest interpretations. |
+| 🕹️ **Simple, No Setup** | Works instantly in the browser. No API keys. No installs. Just UnDoc it. |
+
+---
+
+## 🧱 Product Philosophy
+
+**UnDoc** believes in the **least power principle** — use the simplest effective approach.  
+It isn't a chatbot or a summarizer. It's a transformation engine that rewrites docs into developer-readable format.
+
+### What UnDoc Stands Against
+
+* ❌ "Enterprisey" language and acronym overload  
+* ❌ Walls of text with zero context  
+* ❌ 12 ways to authenticate when one would do  
+* ❌ Hiding the "why" behind API jargon  
+
+### What UnDoc Stands For
+
+* ✅ Clear reasoning before commands  
+* ✅ Actionable examples, not wordy descriptions  
+* ✅ Developer empathy and real-world clarity  
+
+---
+
+## 🧑‍💻 Target Audience
+
+| Segment | Profile |
+|----------|----------|
+| **Senior Developers** | They know how things *should* be explained, and they're tired of wasting time. |
+| **Tech Leads / Architects** | Need to onboard others fast. They'll use UnDoc to teach. |
+| **Indie Hackers & OSS Builders** | Don't have time for deep dives — want clear instructions, now. |
+| **Educators / Mentors** | Use UnDoc to generate simplified, structured versions of docs for students. |
+
+---
+
+## ⚡ Brand Voice
+
+**Tone:** confident · witty · rebellious · minimalist  
+**Style:** short sentences · conversational rhythm · mild sarcasm · developer slang allowed  
+
+### Example Copy
+
+* "Docs shouldn't be this bad."  
+* "We unsh*t the documentation."  
+* "Paste link → press UnDoc → stop crying."  
+* "Like ChatGPT, but for people who actually read docs."  
+
+---
+
+## 🎨 Visual Identity
+
+| Element | Description |
+|----------|-------------|
+| **Colors** | Jet black background with neon cyan and green highlights. Dark terminal aesthetic. |
+| **Typography** | JetBrains Mono (headings) + Inter (body) — modern dev feel. |
+| **Logo Concept** | A broken paragraph symbol reforming into code brackets `{}` or a ↩️ "Undo" arrow. |
+| **Layout** | High contrast, command-line inspired UI with large negative space. |
+| **Moodboard Keywords** | *Hacker terminal · digital rebellion · clarity through contrast.* |
+
+---
+
+## 🧭 Product Storyline
+
+1. **Frustration:** Developers constantly complain that big-tech docs are unreadable.  
+2. **Inspiration:** "What if I could just *undo* this doc and get the real explanation?"  
+3. **Creation:** An AI-driven refactoring engine for documentation — structured, simplified, and beautiful.  
+4. **Movement:** UnDoc becomes the developer's protest — the tool you use when the docs fail you.
 
 ---
 
@@ -130,7 +215,7 @@ User → [Next.js UI] → /api/generate → fetch URL → extract content → ge
 ### Opportunity
 
 Developers don’t want AI chatbots that summarize docs; they want **better docs themselves.**
-ReDoc fills that gap — an AI-powered *translation layer* that transforms enterprise-speak into developer-speak.
+UnDoc fills that gap — an AI-powered *translation layer* that transforms enterprise-speak into developer-speak.
 
 ---
 
@@ -142,7 +227,7 @@ ReDoc fills that gap — an AI-powered *translation layer* that transforms enter
 4. **Use Callouts:** Clarify terms like “tokens vs credentials.”
 5. **Show Defaults:** Always highlight best practice first.
 
-This framework powers ReDoc’s regeneration logic and could evolve into a standalone toolkit or API.
+This framework powers UnDoc’s regeneration logic and could evolve into a standalone toolkit or API.
 
 ---
 
@@ -175,12 +260,74 @@ This framework powers ReDoc’s regeneration logic and could evolve into a stand
 
 ## 💡 Why It Matters
 
-ReDoc isn’t just about simplifying docs — it’s about **improving developer literacy at scale.**
+UnDoc isn’t just about simplifying docs — it’s about **improving developer literacy at scale.**
 By transforming documentation into learning-first artifacts, we make technical knowledge more accessible, equitable, and enjoyable to read.
 
 **Imagine:**
 
 > A future where every complex cloud doc can be understood — not just read.
+
+---
+
+## 🪜 Growth & Marketing Strategy
+
+### 1. **Community Launch**
+
+* Product Hunt: "UnDoc — Undo the Docs, Instantly."  
+* Hacker News: tagline appeal to senior devs' shared pain.  
+* Dev.to & Reddit (`r/programming`, `r/webdev`): memes + authenticity.
+
+### 2. **Open-Source Momentum**
+
+* Release core parser on GitHub (`undoc/engine`).
+* Encourage plugin contributions: "UnDoc for AWS," "UnDoc for Firebase," etc.
+* Showcase user-generated docs ("UnDoc'd" library).
+
+### 3. **Social Proof & Humor**
+
+* Tweet threads comparing "Before vs After" UnDoc output.  
+* "This doc took 3 hours to read. UnDoc did it in 3 seconds."  
+* "If Google Cloud Docs were written by humans."
+
+### 4. **Developer Education**
+
+* Publish "How UnDoc Works" technical breakdowns.
+* Livestream regeneration examples — "UnDocing the worst docs on the internet."
+
+---
+
+## 🪄 Future Vision
+
+* **UnDoc Browser Extension:** auto-transform any docs site with one click.  
+* **UnDoc CLI:** `npx undoc <url>` → generates Markdown.  
+* **UnDoc AI Studio:** version control for doc generations with community voting.  
+* **UnDoc for Teams:** private internal documentation cleanup tool.
+
+---
+
+## 🧩 Brand Keywords
+
+> clarity · rebellion · developer empathy · transformation · efficiency · truth · sanity
+
+---
+
+## 🧭 Positioning Summary
+
+| Axis | Position |
+|------|-----------|
+| **Personality** | Hacker-human hybrid, witty but useful |
+| **Value** | Speed + comprehension + clarity |
+| **Differentiation** | Anti-corporate, anti-fluff developer clarity engine |
+| **Promise** | "We make your documentation readable." |
+
+---
+
+## 🧑‍🎤 Sample Marketing Copy
+
+> **"UnDoc is what happens when a developer finally loses patience."**  
+> Paste any doc link. Hit generate. We'll strip away the buzzwords, reorganize it with the Divio system, and make it human-readable.  
+>  
+> We didn't invent documentation. We just fixed it.
 
 ---
 
