@@ -1,9 +1,10 @@
 ---
-title: ScribeFleet — AI Sub‑Agent Docs Engine for Wechaty (Diátaxis × Docusaurus × Claude Code)
+title: DocWhisper (ScribeFleet) — AI Sub‑Agent Docs Engine for Wechaty (Diátaxis × Docusaurus × Claude Code)
 author: "Huan Li"
 date: 2025-09-05
 tags:
   - documentation
+  - branding
 ---
 
 ## TL;DR
@@ -51,13 +52,177 @@ Docs rot. Contributors are blocked. Newcomers bounce. Wechaty (and most OSS proj
 
 ---
 
-## Code Name Rationale
+## Product Branding: DocWhisper
+
+### Brand Identity
+
+**DocWhisper** represents a new era of intelligent documentation — one that *listens* to your code, *understands* your system, and *speaks* clearly to your users. It embodies empathy, structure, and fluency, turning complex technical systems into accessible human stories.
+
+DocWhisper is not just a product; it's a **philosophy of communication** between machines and people — a quiet voice that ensures no idea gets lost in translation between engineers and the world.
+
+**Brand Tagline:**  
+> *"Your code's quiet storyteller."*
+
+**Core Narrative:**  
+> *"Your code speaks. DocWhisper listens."*
+
+---
+
+### Why "DocWhisper" Is the Perfect Name
+
+| Attribute | Why It Fits Perfectly |
+|-----------|----------------------|
+| **Memorable** | The combination of *Doc* (familiar, utilitarian) and *Whisper* (emotional, soft) creates tension that's easy to remember. |
+| **Humanistic** | Unlike industrial names (e.g., DocOps), *Whisper* gives warmth, calm, and subtlety — human qualities that build trust. |
+| **AI-Native** | Whisper implies intelligence that listens and interprets context. It perfectly describes LLM-based systems that process code and produce documentation. |
+| **Cross-Disciplinary** | Works across technical, creative, and educational markets — developers, technical writers, and startups alike. |
+| **Evocative & Poetic** | Feels personal, almost sentient — the AI that *knows* your code and *tells* its story quietly but confidently. |
+| **Brandable Globally** | Short, phonetic, pronounceable in most languages, with no negative connotations. |
+| **Extensible** | Can easily expand into sub-products (e.g., *WhisperHub*, *WhisperAgent*, *WhisperSync*) or product tiers (*DocWhisper Pro*, *DocWhisper Cloud*). |
+
+---
+
+### Technical Code Name: ScribeFleet
+
+While **DocWhisper** is the public brand, **ScribeFleet** serves as the technical implementation name:
 
 * **ScribeFleet** evokes a **coordinated crew of writers** (sub‑agents) working in parallel.
 * Signals **movement and continuity** (docs that sail forward with the code).
 * Memorable, brandable, works beyond Wechaty.
 
-**Alternates:** *QuadraScribe*, *DocFoundry*, *DocWeaver*, *DX‑Atlas*. (Keep **ScribeFleet** for MVP.)
+**Alternates:** *QuadraScribe*, *DocFoundry*, *DocWeaver*, *DX‑Atlas*. (Keep **ScribeFleet** for technical MVP.)
+
+**Relationship:** DocWhisper is the product brand; ScribeFleet is the underlying multi-agent orchestration engine.
+
+---
+
+### Brand Personality
+
+DocWhisper's brand tone is **empathetic, intelligent, and trustworthy.** It should feel like a quiet expert — not flashy or corporate, but confident and clear.
+
+| Trait | Description |
+|-------|-------------|
+| **Tone** | Calm, concise, encouraging — speaks with clarity, not noise. |
+| **Voice** | First-person plural ("we") when guiding, second-person ("you") when empowering the user. |
+| **Emotion** | Serene confidence — users should *feel safe* relying on the product. |
+| **Aesthetic** | Minimalist, typographic, soft gradient tones; emphasis on whitespace and breathing room. |
+| **Symbolism** | Sound waves, breath, or flowing lines — evoking communication and clarity. |
+
+---
+
+### Elevator Pitch
+
+**30-second pitch:**  
+Modern codebases evolve faster than humans can document them. DocWhisper is an AI-native documentation system that listens to your codebase, understands its patterns, and writes clear, human-quality documentation — automatically, continuously, and contextually.
+
+It's your code's quiet storyteller.
+
+**One-Liner:**  
+**DocWhisper: Your code's quiet storyteller.**
+
+---
+
+### Product Positioning
+
+**Market Category:**  
+AI Developer Tools → Documentation Automation → "AI Docs-as-Code" Platform.
+
+**Problem It Solves:**
+
+* Documentation drift: code changes, docs don't.  
+* Context overload: newcomers can't see the full picture.  
+* Time sink: maintainers hate writing docs manually.  
+
+**Solution:**  
+DocWhisper uses AI agents to:
+
+* Parse codebases (APIs, configs, commits)
+* Generate Diátaxis-structured documentation (Tutorials, How-Tos, Reference, Explanations)
+* Continuously update and open PRs in sync with the repo.
+
+**Differentiation:**
+
+| Feature | Competitors | DocWhisper Advantage |
+|---------|-------------|---------------------|
+| **LLM-driven doc generation** | Common | Whispering metaphor emphasizes *understanding tone & context*, not just output. |
+| **Diátaxis-aligned structure** | Rare | Built-in structural discipline for clarity & maintainability. |
+| **Multi-agent orchestration** | Emerging | Fleet model (Architect, Writer, Linter, Publisher) unique in AI-doc ecosystem. |
+| **CI integration (Docs-as-Code)** | Standard | Seamless PR loop keeps humans in control. |
+
+---
+
+### Visual Identity
+
+| Element | Recommendation |
+|---------|---------------|
+| **Logo** | Stylized wave or breath mark (soft gradient line pattern forming a "D"). Symbolizes clarity and subtle communication. |
+| **Colors** | Calm neutrals + one accent: `#4B9CD3` (soft blue) or `#7C3AED` (violet whisper). Avoid loud reds/oranges. |
+| **Typography** | Inter, Nunito Sans, or Söhne — approachable sans-serifs. Medium weights only. |
+| **Imagery** | Abstract waves, flowing gradients, subtle noise textures. No mascots or hard shadows. |
+| **UI Language** | Rounded corners, motion easing ("ease-in-out"), generous padding; evokes comfort and intelligence. |
+
+---
+
+### Voice & Copy Guidelines
+
+**Voice Pillars:**
+
+1. **Clarity Over Cleverness** — prioritize understanding over jargon.  
+2. **Empathy Over Authority** — speak like a mentor, not a manual.  
+3. **Whisper, Don't Shout** — tone should guide users calmly to insight.  
+
+**Example Copy:**
+
+| Context | Example |
+|---------|---------|
+| **Landing Hero** | "Your code speaks. DocWhisper listens." |
+| **Feature Card** | "Generates docs that read like they were written by your team — because they are." |
+| **CTA Button** | "Start Listening" or "Let's Whisper Together." |
+| **Error Message** | "We didn't quite catch that — mind rephrasing?" |
+
+---
+
+### Ecosystem Alignment
+
+DocWhisper fits elegantly within the **Ship.Fail** and **PreAngel** brand family:
+
+* Shares the same conceptual DNA — *human + AI co‑creation*.  
+* Extends the "ship fast, explain clearly" philosophy.  
+* Works naturally alongside tools like *ReDoc*, *ScribeFleet*, and *ReKey*.
+
+| Ecosystem Partner | Relationship |
+|-------------------|--------------|
+| **Ship.Fail** | Community & launchpad for hackathon ideas. |
+| **ScribeFleet** | Underlying multi-agent orchestration engine powering DocWhisper. |
+| **ReDoc** | Visualization and build pipeline component for publishing docs. |
+| **PreAngel LLC** | Parent incubator brand; DocWhisper fits "AI-native SaaS for creators." |
+
+---
+
+### Future Extensions
+
+| Sub-Brand | Description |
+|-----------|-------------|
+| **WhisperSync** | Keeps documentation synchronized across branches and versions. |
+| **WhisperHub** | Collaborative cloud platform for doc review & agent feedback. |
+| **WhisperCLI** | Local command-line interface for instant doc generation. |
+| **WhisperStudio** | Visual interface for editing, comparing, and publishing docs. |
+
+---
+
+### Long-Term Vision
+
+> **To make documentation self-sustaining and emotionally intelligent.**
+
+DocWhisper will redefine how developers interact with knowledge — not as static text but as a living, adaptive conversation. It bridges the gap between **machine understanding** and **human communication**, one whisper at a time.
+
+---
+
+### Brand Keywords
+
+**Core Keywords:** whisper, clarity, empathy, understanding, intelligence, storytelling, flow, structure, calm, evolution.
+
+**Avoided Keywords:** automation, bot, generate, AI‑powered (overused, mechanical tone).
 
 ---
 
