@@ -148,3 +148,7 @@ docs/
 
 **Huan Li (@huan)** — Founding Human & Architect @ PreAngel LLC  
 Inspired by the BMAD-METHOD, Docs-as-Code philosophy, and the power of human-centered design.
+
+## Credit
+
+Huan Li <https://github.com/huan>

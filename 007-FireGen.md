@@ -108,3 +108,7 @@ Hackathon MVP Value
 Call to Action
 
 Install once, reuse forever. Build faster. Ship with confidence. Let Firebase RTDB be your universal Generative AI API.
+
+## Credit
+
+Huan Li <https://github.com/huan>

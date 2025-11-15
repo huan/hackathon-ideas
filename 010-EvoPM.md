@@ -496,3 +496,7 @@ v4               ●──────▶  (alternate)
 ## End of Specification
 
 ProjectOS v0.1 (Minimal Git-Only)
+
+## Credit
+
+Huan Li <https://github.com/huan>

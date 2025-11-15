@@ -363,3 +363,7 @@ Our paper advances both methodology and empirical understanding of LLM optimizat
 - Reid et al. (2024). GPQA: A Benchmark for Graduate-Level Question Answering.
 - Jimenez et al. (2023). SWE-bench: Can Language Models Resolve Real GitHub Issues?
 - Suzgun et al. (2022). Challenging BIG-Bench Tasks and Hardness Analysis.
+
+## Credit
+
+Huan Li <https://github.com/huan>

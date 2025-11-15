@@ -438,3 +438,7 @@ app.listen(8787, () => console.log("gateway up"));
 ## 17) Final Notes
 
 Ship the happy path first. Optimize for a crisp, repeatable demo that proves the loop: ads → tags → rule → push → deep link → practice. Then iterate.
+
+## Credit
+
+Huan Li <https://github.com/huan>
