@@ -1,3 +1,12 @@
+---
+title: "UnDoc — Undo the docs. Read what matters."
+author: "Huan Li"
+date: 2025-11-15
+tags:
+  - documentation
+  - developer-tools
+---
+
 # 🧠 UnDoc — Hackathon Idea Memo
 
 **Tagline:** *Undo the docs. Read what matters.*
@@ -341,3 +350,7 @@ By transforming documentation into learning-first artifacts, we make technical k
 **Project:** UnDoc
 **Hackathon Track:** Developer Tools / AI × Productivity
 **Date:** October 2025
+
+## Credit
+
+Huan Li <https://github.com/huan>

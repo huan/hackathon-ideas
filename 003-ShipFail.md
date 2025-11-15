@@ -1,3 +1,12 @@
+---
+title: "Ship.Fail — GitHub for Hackathon Ideas"
+author: "Huan Li"
+date: 2025-11-15
+tags:
+  - hackathon
+  - community
+---
+
 # 🚀 Ship.Fail — GitHub for Hackathon Ideas
 
 ## History
@@ -73,3 +82,7 @@ Hackathons are where bold, crazy ideas come alive — but too often, they vanish
 ## ✨ Vision
 
 Be the **go-to place for hackathon ideas**. Not another Devpost — just the home for half-baked, experimental, crazy hacker thoughts. A place where failing is celebrated, because every fail ships something new.
+
+## Credit
+
+Huan Li <https://github.com/huan>

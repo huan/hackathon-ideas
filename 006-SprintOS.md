@@ -99,3 +99,7 @@ Too many teams waste months debating strategy, building the wrong features, or f
 ## 🧩 Key Message
 
 > **Every team deserves the clarity of a Design Sprint — without needing a world-class facilitator in the room. SprintOS makes that possible.**
+
+## Credit
+
+Huan Li <https://github.com/huan>

@@ -407,3 +407,7 @@ module.exports = {
 
 * **Hallucinations:** reference is **code‑sourced only**; fail CI on unresolved symbols; examples run in doctest.
 * **Quadrant creep:** linter blocks mixed‑type pages (heuristics & keywo
+
+## Credit
+
+Huan Li <https://github.com/huan>

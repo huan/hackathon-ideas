@@ -130,3 +130,7 @@ humancloud deploy app --source ./build --target gcp --region us-west1
 …and letting the translator handle the exact provider-specific syntax.
 
 That’s the dream: **One human language for the cloud.**
+
+## Credit
+
+Huan Li <https://github.com/huan>

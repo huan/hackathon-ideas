@@ -81,3 +81,7 @@ MoCG is an **AI-powered party card game generator**. Upload a list of people →
 ---
 
 > MoCG is about turning *any group of people* into *the heroes of their own hilarious party game*. That’s the magic we want to show at the hackathon.
+
+## Credit
+
+Huan Li <https://github.com/huan>

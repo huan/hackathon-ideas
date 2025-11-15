@@ -1,3 +1,13 @@
+---
+title: "EvoForge: Evolutionary Tool Ecosystems for AI Agents"
+author: "Huan Li"
+date: 2025-11-15
+tags:
+  - ai
+  - agents
+  - genetic-algorithms
+---
+
 # EvoForge: Evolutionary Tool Ecosystems for AI Agents
 
 > **One-liner / Elevator pitch**  
@@ -863,3 +873,7 @@ From here, the next step is up to you:
 **build, experiment, and let the tools evolve.**
 
 > [Dynamic Tool Creation for Google Workspace Automation with Gemini CLI, Kanshi Tanaike](https://tanaikech.github.io/2025/10/09/dynamic-tool-creation-for-google-workspace-automation-with-gemini-cli/)
+
+## Credit
+
+Huan Li <https://github.com/huan>

@@ -222,3 +222,7 @@ and help us **build a BEAM for JavaScript.**
 > 💌 *Machines that talk. Actors that think.*
 > 🧠 *XState + Actors = Deterministic Concurrency.*
 > 🚀 *Write once, orchestrate everywhere.*
+
+## Credit
+
+Huan Li <https://github.com/huan>

@@ -1,3 +1,12 @@
+---
+title: "BMAD Method Getting Started Guide"
+author: "Huan Li"
+date: 2025-11-15
+tags:
+  - bmad
+  - methodology
+  - guide
+---
 
 ### The Core Philosophy: "Vibe CEO" and the Two-Phase Workflow
 
@@ -206,3 +215,7 @@ The `docs/user-guide.md` file specifies that Codex integration relies on the `AG
     ```
 
 By following this comprehensive workflow, you can leverage the BMAD Method to systematically take a project from a simple idea to a fully implemented application, using a structured, repeatable, and high-quality process.
+
+## Credit
+
+Huan Li <https://github.com/huan>
