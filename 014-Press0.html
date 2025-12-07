@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Press<span class="font-brand-zero">0</span> – From Zero to Book</title>
+    <meta
+      name="description"
+      content="Press0 turns any long-form content into a beautifully designed, print-ready book PDF. From zero to book in minutes."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Tailwind config for Press<span class="font-brand-zero">0</span> brand
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+            },
+            colors: {
+              press0: {
+                50: "#f4f4ff",
+                100: "#e4e4ff",
+                200: "#c7c7ff",
+                300: "#a3a3ff",
+                400: "#7c7cff",
+                500: "#5555ff",
+                600: "#3b3bd6",
+                700: "#2d2da3",
+                800: "#202070",
+                900: "#15154a",
+              },
+            },
+            boxShadow: {
+              glow: "0 0 40px rgba(85,85,255,0.35)",
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://unpkg.com/flowbite@2.5.1/dist/flowbite.min.js" defer></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" />
+    <style>
+      .font-brand-zero {
+        font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+        font-variant-numeric: slashed-zero;
+      }
+    </style>
+  </head>
+  <body
+    class="h-full bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-50"
+  >
+    <div class="min-h-screen flex flex-col">
+      <!-- NAVBAR -->
+      <header
+        class="border-b border-slate-200/70 bg-white/80 backdrop-blur-sm dark:border-slate-800 dark:bg-slate-950/80"
+      >
+        <div
+          class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8"
+        >
+          <div class="flex items-center gap-2">
+            <div
+              class="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-press0-400 via-press0-600 to-slate-900 text-white shadow-glow"
+            >
+              <span class="text-lg font-semibold tracking-tight font-brand-zero">0</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="text-lg font-semibold tracking-tight">Press<span class="font-brand-zero">0</span></span>
+              <span class="text-xs text-slate-500 dark:text-slate-400">
+                From zero to book.
+              </span>
+            </div>
+          </div>
+
+          <nav class="hidden items-center gap-8 text-sm font-medium text-slate-600 dark:text-slate-300 md:flex">
+            <a href="#how" class="hover:text-press0-500 dark:hover:text-press0-300">How it works</a>
+            <a href="#who" class="hover:text-press0-500 dark:hover:text-press0-300">Who it's for</a>
+            <a href="#story" class="hover:text-press0-500 dark:hover:text-press0-300">Story</a>
+          </nav>
+
+          <div class="flex items-center gap-3">
+            <!-- Theme toggle -->
+            <button
+              id="theme-toggle"
+              type="button"
+              class="inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200/80 bg-white text-slate-700 shadow-sm transition hover:border-press0-300 hover:text-press0-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-press0-500 dark:hover:text-press0-300"
+              aria-label="Toggle dark mode"
+            >
+              <svg
+                id="theme-toggle-light-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="h-4 w-4 hidden dark:block"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M12 3v2.25M18.364 5.636l-1.59 1.59M21 12h-2.25M18.364 18.364l-1.59-1.59M12 18.75V21M7.227 16.773l-1.59 1.59M5.25 12H3M7.227 7.227l-1.59-1.59M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+                />
+              </svg>
+              <svg
+                id="theme-toggle-dark-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="h-4 w-4 block dark:hidden"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 12.79A9 9 0 0 1 12.21 3 7.5 7.5 0 1 0 21 12.79Z"
+                />
+              </svg>
+            </button>
+
+            <a
+              href="#cta"
+              class="hidden rounded-full border border-transparent bg-press0-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-press0-500 md:inline-flex"
+            >
+              Get early access
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- MAIN -->
+      <main class="flex-1">
+        <!-- HERO -->
+        <section
+          class="relative overflow-hidden border-b border-slate-200/80 bg-gradient-to-b from-slate-50 via-white to-slate-50 dark:border-slate-800 dark:from-slate-950 dark:via-slate-950 dark:to-slate-900"
+        >
+          <div
+            class="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(85,85,255,0.22),transparent_55%)] opacity-80 dark:bg-[radial-gradient(circle_at_top,rgba(85,85,255,0.32),transparent_55%)]"
+          ></div>
+
+          <div
+            class="relative mx-auto flex max-w-6xl flex-col items-center gap-12 px-4 pb-16 pt-10 sm:px-6 md:flex-row md:gap-10 lg:px-8 lg:pb-24 lg:pt-16"
+          >
+            <!-- Hero text -->
+            <div class="max-w-xl space-y-6 md:w-1/2">
+              <div
+                class="inline-flex items-center gap-2 rounded-full border border-slate-200/70 bg-white/70 px-3 py-1 text-xs font-semibold text-slate-600 shadow-sm backdrop-blur dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-300"
+              >
+                <span
+                  class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-press0-600 text-[10px] font-bold text-white font-brand-zero">0
+                </span>
+                <span>From raw draft to press-ready PDF in one step.</span>
+              </div>
+
+              <h1
+                class="text-balance text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl sm:leading-tight dark:text-white"
+              >
+                From <span class="text-press0-600">zero</span> to
+                <span class="underline decoration-press0-400/70 decoration-2 underline-offset-4">book</span>
+                in minutes.
+              </h1>
+
+              <p class="text-base leading-relaxed text-slate-600 dark:text-slate-300">
+                You finished the words. Press<span class="font-brand-zero">0</span> finishes the book—layout, typography, chapter art, and a
+                production-grade PDF that’s ready for the printer, the bookstore, and the world.
+              </p>
+
+              <div class="flex flex-wrap items-center gap-3">
+                <a
+                  href="#cta"
+                  class="inline-flex items-center justify-center gap-2 rounded-full bg-press0-600 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-press0-600/40 transition hover:bg-press0-500"
+                >
+                  Get early access
+                  <span aria-hidden="true">→</span>
+                </a>
+                <button
+                  type="button"
+                  class="inline-flex items-center justify-center gap-2 rounded-full border border-slate-300 bg-white/80 px-4 py-2.5 text-sm font-medium text-slate-700 backdrop-blur transition hover:border-press0-400 hover:text-press0-500 dark:border-slate-600 dark:bg-slate-900/80 dark:text-slate-200 dark:hover:border-press0-500 dark:hover:text-press0-300"
+                >
+                  <span class="inline-flex h-6 w-6 items-center justify-center rounded-full border border-slate-300/80 text-xs dark:border-slate-600">
+                    ►
+                  </span>
+                  Watch the 60s demo
+                </button>
+              </div>
+
+              <div class="space-y-2 pt-4">
+                <p class="text-xs uppercase tracking-[0.2em] text-slate-500 dark:text-slate-400">
+                  Built for
+                </p>
+                <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-slate-600 dark:text-slate-300">
+                  <span class="inline-flex items-center gap-1 rounded-full bg-slate-100 px-2.5 py-1 dark:bg-slate-800">
+                    <span class="h-1.5 w-1.5 rounded-full bg-press0-500"></span>
+                    Authors & memoirists
+                  </span>
+                  <span class="inline-flex items-center gap-1 rounded-full bg-slate-100 px-2.5 py-1 dark:bg-slate-800">
+                    <span class="h-1.5 w-1.5 rounded-full bg-press0-500"></span>
+                    Editors & small presses
+                  </span>
+                  <span class="inline-flex items-center gap-1 rounded-full bg-slate-100 px-2.5 py-1 dark:bg-slate-800">
+                    <span class="h-1.5 w-1.5 rounded-full bg-press0-500"></span>
+                    Technical & indie publishers
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero preview card -->
+            <div class="md:w-1/2">
+              <div
+                class="relative mx-auto max-w-md rounded-3xl border border-slate-200/80 bg-slate-900/90 p-5 text-slate-50 shadow-2xl shadow-slate-900/60 ring-1 ring-press0-500/40 backdrop-blur dark:border-slate-700 dark:bg-slate-900/90"
+              >
+                <div class="mb-4 flex items-center justify-between text-xs text-slate-300">
+                  <span class="inline-flex items-center gap-1">
+                    <span
+                      class="inline-flex h-5 w-5 items-center justify-center rounded-full bg-press0-500 text-[10px] font-semibold"
+                      >0</span
+                    >
+                    <span>Press<span class="font-brand-zero">0</span> Preview</span>
+                  </span>
+                  <span class="rounded-full border border-slate-700 px-2 py-0.5 text-[10px] uppercase tracking-[0.16em]">
+                    6×9 in · Print-ready
+                  </span>
+                </div>
+
+                <div
+                  class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-100 via-slate-200 to-slate-100 p-4 text-slate-900 shadow-inner dark:from-slate-900 dark:via-slate-800 dark:to-slate-900"
+                >
+                  <div class="mx-auto flex w-full max-w-[260px] flex-col items-center">
+                    <div
+                      class="aspect-[6/9] w-full rounded-2xl border border-slate-300 bg-white shadow-lg dark:border-slate-600 dark:bg-slate-950"
+                    >
+                      <div
+                        class="h-24 w-full bg-gradient-to-br from-press0-400 via-press0-700 to-slate-900"
+                      ></div>
+                      <div class="space-y-1 px-3 py-3">
+                        <p class="text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
+                          Chapter 17
+                        </p>
+                        <p class="text-xs font-semibold text-slate-900 dark:text-slate-50">
+                          Movies, Jokes, and American Culture
+                        </p>
+                        <div class="space-y-1 pt-2">
+                          <div class="h-1.5 rounded bg-slate-200 dark:bg-slate-700"></div>
+                          <div class="h-1.5 w-11/12 rounded bg-slate-200 dark:bg-slate-700"></div>
+                          <div class="h-1.5 w-10/12 rounded bg-slate-200 dark:bg-slate-700"></div>
+                          <div class="h-1.5 w-9/12 rounded bg-slate-200 dark:bg-slate-700"></div>
+                          <div class="h-1.5 w-7/12 rounded bg-slate-200 dark:bg-slate-700"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="mt-4 rounded-xl bg-white/70 p-3 text-[11px] shadow-sm dark:bg-slate-950/80">
+                    <p class="mb-1 font-semibold text-slate-900 dark:text-slate-50">
+                      “This is my blog post, but it suddenly looks like it belongs on a bookstore shelf.”
+                    </p>
+                    <p class="text-slate-600 dark:text-slate-300">
+                      Press<span class="font-brand-zero">0</span> renders a literal 6×9 page—hero image at the top, chapter number and title, and
+                      body text that reads like a real book.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PROBLEM / STORY -->
+        <section
+          id="story"
+          class="border-b border-slate-200/80 bg-white dark:border-slate-800 dark:bg-slate-950"
+        >
+          <div class="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8 lg:py-18">
+            <div class="grid gap-10 md:grid-cols-[1.2fr,1fr] md:items-center">
+              <div class="space-y-4">
+                <h2 class="text-2xl font-semibold tracking-tight sm:text-3xl">
+                  Writing is hard. Publishing shouldn’t be harder.
+                </h2>
+                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                  Yesterday’s story: an author finishes a deeply personal biography in Markdown, publishes it as
+                  a blog post, falls in love with the words—and then spends **dozens of hours** fighting LaTeX,
+                  bleed, margins, and cover alignment just to get a single KDP-ready PDF.
+                </p>
+                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                  The emotional arc is always the same: joy at finishing the writing, followed by frustration,
+                  delay, and pixel-pushing. Traditional tools assume you are a production engineer, a print
+                  technician, and a designer. Most authors just want their book to **look like a real book.**
+                </p>
+                <p class="text-sm leading-relaxed text-slate-600 dark:text-slate-300">
+                  Press<span class="font-brand-zero">0</span> exists to remove that gap. It is the invisible publishing studio that sits between “I’m
+                  done writing” and “My book is on a shelf.”
+                </p>
+              </div>
+
+              <div class="space-y-4">
+                <div
+                  class="rounded-2xl border border-rose-200/70 bg-rose-50/80 p-4 text-sm text-rose-900 shadow-sm dark:border-rose-900 dark:bg-rose-950/60 dark:text-rose-100"
+                >
+                  <p class="mb-1 text-xs font-semibold uppercase tracking-[0.18em] text-rose-500">
+                    The familiar failure loop
+                  </p>
+                  <ul class="space-y-1">
+                    <li>• White padding on what should be a full-bleed cover.</li>
+                    <li>• Chapter hero images cut off or misaligned.</li>
+                    <li>• Geometry and margins that don’t match the printer’s specs.</li>
+                    <li>• Fonts missing, PDFs rejected, endless re-exports.</li>
+                  </ul>
+                </div>
+
+                <div
+                  class="rounded-2xl border border-press0-400/60 bg-press0-50/80 p-4 text-sm text-slate-900 shadow-sm dark:border-press0-500/70 dark:bg-slate-900/80 dark:text-slate-100"
+                >
+                  <p class="mb-1 text-xs font-semibold uppercase tracking-[0.18em] text-press0-600 dark:text-press0-400">
+                    The Press<span class="font-brand-zero">0</span> promise
+                  </p>
+                  <ul class="space-y-1">
+                    <li>• You bring the manuscript.</li>
+                    <li>• Press<span class="font-brand-zero">0</span> reads it, designs it, illustrates it.</li>
+                    <li>• You download a print-grade PDF.</li>
+                    <li>• No more production nightmares. Just books.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section
+          id="how"
+          class="border-b border-slate-200/80 bg-slate-50 dark:border-slate-800 dark:bg-slate-950"
+        >
+          <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl text-center">
+              <h2 class="text-2xl font-semibold tracking-tight sm:text-3xl">
+                One flow. From draft to press.
+              </h2>
+              <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">
+                Under the hood, Press<span class="font-brand-zero">0</span> coordinates layout, typography, illustration, and print QA so you never
+                have to think about LaTeX, trims, or bleed again.
+              </p>
+            </div>
+
+            <div class="mt-10 grid gap-6 md:grid-cols-3">
+              <div
+                class="flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-4 text-sm shadow-sm dark:border-slate-700 dark:bg-slate-900"
+              >
+                <div
+                  class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-press0-600 text-xs font-semibold text-white"
+                >
+                  1
+                </div>
+                <h3 class="text-sm font-semibold">Drop in your words.</h3>
+                <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300">
+                  Markdown, DOCX, Notion export, blog archives—Press0 ingests your long-form writing and maps
+                  it into chapters, sections, and narrative beats.
+                </p>
+              </div>
+
+              <div
+                class="flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-4 text-sm shadow-sm dark:border-slate-700 dark:bg-slate-900"
+              >
+                <div
+                  class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-press0-600 text-xs font-semibold text-white"
+                >
+                  2
+                </div>
+                <h3 class="text-sm font-semibold">Let the agents design.</h3>
+                <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300">
+                  AI layout agents choose typography, build chapter hero openers, generate illustration if
+                  needed, and set up geometry that matches real printers.
+                </p>
+              </div>
+
+              <div
+                class="flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-4 text-sm shadow-sm dark:border-slate-700 dark:bg-slate-900"
+              >
+                <div
+                  class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-press0-600 text-xs font-semibold text-white"
+                >
+                  3
+                </div>
+                <h3 class="text-sm font-semibold">Download your master copy.</h3>
+                <p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300">
+                  Press<span class="font-brand-zero">0</span> outputs a press-ready PDF. Margins, bleed, DPI, and fonts are validated. You can send
+                  it straight to KDP, Ingram, or your local press.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PROTOCOL -->
+        <section
+          id="protocol"
+          class="border-b border-slate-200/80 bg-slate-950 text-slate-50 dark:border-slate-800 dark:bg-black"
+        >
+          <div class="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
+            <div class="grid gap-8 md:grid-cols-[1.1fr,0.9fr] md:items-center">
+              <div class="space-y-3">
+                <h2 class="text-2xl font-semibold tracking-tight sm:text-3xl">
+                  Powered by the Press<span class="font-brand-zero">0</span> Protocol.
+                </h2>
+                <p class="text-sm text-slate-300">
+                  Underneath the calm surface of the UI, Press<span class="font-brand-zero">0</span> runs a simple idea: every book can be described
+                  as a clear specification, then rendered perfectly.
+                </p>
+                <p class="text-sm text-slate-300">
+                  The Press<span class="font-brand-zero">0</span> Protocol reads your manuscript, infers structure and style, encodes it as a
+                  machine-readable book spec, then drives layout, illustration, and print checks from that
+                  single source of truth.
+                </p>
+              </div>
+              <div>
+                <div
+                  class="rounded-2xl border border-slate-700 bg-slate-900/80 p-4 text-xs shadow-lg shadow-black/40"
+                >
+                  <p class="mb-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400">
+                    The Press<span class="font-brand-zero">0</span> flow
+                  </p>
+                  <ol class="space-y-2 text-slate-200">
+                    <li>
+                      <span class="font-semibold text-press0-300">1.</span>
+                      Manuscript ➝ chapters, sections, and narrative beats.
+                    </li>
+                    <li>
+                      <span class="font-semibold text-press0-300">2.</span>
+                      Book spec ➝ trim size, margins, typography, hero layout.
+                    </li>
+                    <li>
+                      <span class="font-semibold text-press0-300">3.</span>
+                      Rendered pages ➝ verified for bleed, DPI, and press requirements.
+                    </li>
+                  </ol>
+                  <p class="mt-3 text-[11px] text-slate-400">
+                    You don’t see the protocol. You just see a book that looks like it has always existed.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- WHO IT'S FOR / SOCIAL PROOF -->
+        <section
+          id="who"
+          class="border-b border-slate-200/80 bg-white dark:border-slate-800 dark:bg-slate-950"
+        >
+          <div class="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
+            <div class="grid gap-10 md:grid-cols-[1.1fr,0.9fr] md:items-start">
+              <div>
+                <h2 class="text-2xl font-semibold tracking-tight sm:text-3xl">
+                  Built for people who live in words.
+                </h2>
+                <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">
+                  Press<span class="font-brand-zero">0</span> sits quietly at the end of your writing workflow and turns your work into a physical
+                  object that feels as serious as you are.
+                </p>
+
+                <div class="mt-6 grid gap-4 text-sm md:grid-cols-2">
+                  <div class="space-y-1">
+                    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
+                      Authors & memoirists
+                    </p>
+                    <p class="text-slate-700 dark:text-slate-200">
+                      Turn a lifetime of notes, blogs, or journals into a memoir without ever seeing a LaTeX
+                      template.
+                    </p>
+                  </div>
+                  <div class="space-y-1">
+                    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
+                      Editors & small presses
+                    </p>
+                    <p class="text-slate-700 dark:text-slate-200">
+                      Offer premium book design at startup speed, focusing on taste instead of file prep.
+                    </p>
+                  </div>
+                  <div class="space-y-1">
+                    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
+                      Technical & indie publishers
+                    </p>
+                    <p class="text-slate-700 dark:text-slate-200">
+                      Convert documentation, handbooks, or lecture notes into reference-worthy volumes.
+                    </p>
+                  </div>
+                  <div class="space-y-1">
+                    <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
+                      Communities & events
+                    </p>
+                    <p class="text-slate-700 dark:text-slate-200">
+                      Collect talks, essays, and stories into anthologies with a single upload.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="space-y-4">
+                <div
+                  class="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm shadow-sm dark:border-slate-700 dark:bg-slate-900"
+                >
+                  <p class="text-xs font-semibold uppercase tracking-[0.18em] text-slate-500 dark:text-slate-400">
+                    Early reader reaction
+                  </p>
+                  <p class="mt-2 text-sm text-slate-800 dark:text-slate-100">
+                    “I spent more time fighting page geometry than writing my own story. Press<span class="font-brand-zero">0</span> turned the same
+                    Markdown into a book that looks like it came out of a New York publisher.”
+                  </p>
+                  <p class="mt-2 text-xs text-slate-500 dark:text-slate-400">
+                    — Early memoir author, beta user
+                  </p>
+                </div>
+
+                <div
+                  class="rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-xs text-emerald-900 shadow-sm dark:border-emerald-900 dark:bg-emerald-950/70 dark:text-emerald-50"
+                >
+                  <p class="font-semibold">
+                    “Most people can write a book. Very few can publish one. Press<span class="font-brand-zero">0</span> closes that gap.”
+                  </p>
+                  <p class="mt-2">
+                    This is our north star: every finished manuscript deserves a finished book.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section
+          id="cta"
+          class="bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900 text-slate-50"
+        >
+          <div class="mx-auto max-w-4xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
+            <div class="mx-auto max-w-2xl text-center space-y-4">
+              <h2 class="text-2xl font-semibold tracking-tight sm:text-3xl">
+                Be the first to start at zero.
+              </h2>
+              <p class="text-sm text-slate-300">
+                We’re inviting a small circle of authors, editors, and small presses to shape Press<span class="font-brand-zero">0</span>. Bring a
+                real manuscript. We’ll bring the invisible studio.
+              </p>
+            </div>
+
+            <form class="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row">
+              <label class="sr-only" for="email">Email</label>
+              <input
+                id="email"
+                type="email"
+                required
+                placeholder="you@publisher.com"
+                class="w-full rounded-full border border-slate-600 bg-slate-900/90 px-4 py-2.5 text-sm text-slate-50 placeholder:text-slate-500 focus:border-press0-400 focus:outline-none focus:ring-2 focus:ring-press0-500/60"
+              />
+              <button
+                type="submit"
+                class="inline-flex items-center justify-center rounded-full bg-press0-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg shadow-press0-500/40 transition hover:bg-press0-400"
+              >
+                Join the waitlist
+              </button>
+            </form>
+
+            <p class="mt-3 text-center text-[11px] text-slate-500">
+              No spam. Just one email when Press<span class="font-brand-zero">0</span> is ready for your manuscript.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="border-t border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-950">
+        <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-5 text-xs text-slate-500 sm:flex-row sm:px-6 lg:px-8">
+          <p>© <span id="year"></span> Press<span class="font-brand-zero">0</span>. From zero to book.</p>
+          <div class="flex flex-wrap items-center gap-4">
+            <span>Built for authors, editors, and small presses.</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Waitlist confirmation email copy (concept) -->
+    <!--
+    Subject: Welcome to Press<span class="font-brand-zero">0</span> — From Zero to Book
+
+    Hi [First name],
+
+    Thank you for joining the Press<span class="font-brand-zero">0</span> waitlist.
+
+    You just raised your hand as someone who believes finishing the words should be the hard part — not wrestling with LaTeX, margins, or bleed.
+
+    Over the next few weeks, we’ll invite a small group of authors, editors, and small presses to try Press<span class="font-brand-zero">0</span> on real manuscripts. You’ll be able to:
+    • Upload a long-form draft (Markdown, DOCX, or export from your blog).
+    • See it rendered as a literal 6×9 book, with chapter hero art and tuned typography.
+    • Download a press-ready PDF you can send straight to your printer or KDP.
+
+    When your invite is ready, we’ll email you with a private link and a short demo.
+
+    Until then, keep writing. We’ll take care of the book.
+
+    — The Press<span class="font-brand-zero">0</span> team
+    From zero to book.
+    -->
+
+    <!-- 60-second demo script (concept) -->
+    <!--
+    0–10s — Cold open
+    • Show a scrolling Markdown document: a long biography chapter.
+    • Voiceover: “This is what most finished books look like… in your editor.”
+
+    10–25s — The pain
+    • Cut to LaTeX template, error messages, KDP warnings about bleed and margins.
+    • Voiceover: “Publishing means becoming a layout artist, print technician, and file janitor.”
+
+    25–40s — Press<span class="font-brand-zero">0</span> moment
+    • Show Press<span class="font-brand-zero">0</span>: upload the same Markdown, choose “6×9 Memoir”, click “Generate book”.
+    • Quick montage: chapter hero image appears, 6×9 page preview animates in, typography settles.
+    • Voiceover: “Press0 reads your manuscript, designs the layout, and generates a press-ready PDF.”
+
+    40–55s — Outcome
+    • Show a literal 6×9 preview, then a printed proof on a desk.
+    • Voiceover: “From zero to book in minutes. No LaTeX, no margin math, no bleed disasters.”
+
+    55–60s — Call to action
+    • On screen: “Press0 — Where Publishing Begins.”
+    • Button: “Join the early access list at press0.app”.
+    -->
+
+    <script>
+      // Year in footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Theme toggle with localStorage
+      const themeToggle = document.getElementById("theme-toggle");
+      const lightIcon = document.getElementById("theme-toggle-dark-icon");
+      const darkIcon = document.getElementById("theme-toggle-light-icon");
+
+      function setTheme(dark) {
+        const root = document.documentElement;
+        if (dark) {
+          root.classList.add("dark");
+          darkIcon.classList.remove("hidden");
+          lightIcon.classList.add("hidden");
+          localStorage.setItem("press0-theme", "dark");
+        } else {
+          root.classList.remove("dark");
+          darkIcon.classList.add("hidden");
+          lightIcon.classList.remove("hidden");
+          localStorage.setItem("press0-theme", "light");
+        }
+      }
+
+      // Initialize theme from system or saved preference
+      (function initTheme() {
+        const saved = localStorage.getItem("press0-theme");
+        if (saved === "dark" || (!saved && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+          setTheme(true);
+        } else {
+          setTheme(false);
+        }
+      })();
+
+      themeToggle?.addEventListener("click", () => {
+        const isDark = document.documentElement.classList.contains("dark");
+        setTheme(!isDark);
+      });
+    </script>
+  </body>
+</html>
